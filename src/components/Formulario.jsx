@@ -127,7 +127,7 @@ export class Formulario extends Component {
                 <textarea minLength="20" maxLength="400" name="mensagem" rows="4" cols="50" form="formulario-contato"
                           placeholder="Nos conte mais..."
                           id="conteudo-input" value={this.state.mensagem}
-                          onChange={(event) => this.handleUserInput(event)} required/>
+                          onChange={(event) => this.handleUserInput(event)} required value=" "/>
 
                 <input type="submit" name="submit" value="Enviar" className="fa fa-paper-plane"
                        disabled={this.state.formEValido}/>

@@ -7,7 +7,16 @@
 
 .landingview {
   grid-area: landingview;
-  background: url("images/img-1.png") no-repeat center center fixed;
+  background-position: center center;
+
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+
+  background-image: url("images/img-1.png");
+  -webkit-background-image: url("images/img-1.png");
+  -o-background-image: url("images/img-1.png");
+  -moz-background-image: url("images/img-1.png");
+
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

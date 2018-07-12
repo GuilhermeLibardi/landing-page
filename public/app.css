@@ -280,7 +280,9 @@ body {
   .formulario-wrapper input {
     border: none;
     background-color: transparent;
-    font-family: 'Montserrat', sans-serif; }
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 1.1rem; }
   .formulario-wrapper input[type=text], .formulario-wrapper input[type=email] {
     border-bottom: 1px solid #111111;
     display: block;
@@ -308,7 +310,8 @@ body {
     border: 1px solid #222222;
     border-radius: 5px;
     background-color: transparent;
-    font-family: 'Montserrat', sans-serif; }
+    font-family: 'Montserrat', sans-serif;
+    color: white; }
 
 @media (max-width: 500px) {
   .formulario-wrapper textarea, .formulario-wrapper input[type=text], .formulario-wrapper input[type=email] {
@@ -412,7 +415,13 @@ body {
 
 .landingview {
   grid-area: landingview;
-  background: url(images/img-1.png) no-repeat center center fixed;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-image: url(images/img-1.png);
+  -webkit-background-image: url(images/img-1.png);
+  -o-background-image: url(images/img-1.png);
+  -moz-background-image: url(images/img-1.png);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
