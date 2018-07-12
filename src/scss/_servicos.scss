@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+.servicos-wrapper {
+  grid-area: servicos;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: .2fr 1fr 1fr;
+  grid-template-areas: "nossosservicos""servico1" "servico2";
+  justify-items: center;
+  background-color: whitesmoke;
+  margin: 0 2vw;
+  border-radius: 15px;
+  color: #333;
+
+  padding: 0 5vw;
+
+  .nossos-servicos {
+    grid-area: nossosservicos;
+    padding: 5px;
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    align-self: center;
+  }
+
+  .servico1 {
+    grid-area: servico1;
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: .1fr .7fr;
+    grid-template-areas: "foto1 nome1" "foto1 paragrafo1";
+    align-items: center;
+    justify-items: center;
+  }
+
+  .servico2 {
+    grid-area: servico2;
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: .1fr .7fr;
+    grid-template-areas: "nome2 foto2" "paragrafo2 foto2";
+    align-items: center;
+    justify-items: center;
+  }
+
+  .servico-wrapper {
+    .servico-img {
+      width: 40vw;
+      height: 60vh;
+    }
+
+    .servico-nome {
+      font-family: 'Raleway', sans-serif;
+      font-size: 2rem;
+      padding: 5px;
+      visibility: hidden;
+    }
+
+    .servico-paragraph {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.1rem;
+      padding: 5px;
+      text-align: justify;
+      visibility: hidden;
+    }
+
+    .hide{
+      opacity: 0;
+    }
+
+    .show{
+      opacity: 1;
+    }
+
+    .nome1 {
+      grid-area: nome1;
+    }
+    .nome2 {
+      grid-area: nome2;
+    }
+    .img1 {
+      grid-area: foto1;
+    }
+    .img2 {
+      grid-area: foto2;
+    }
+    .p1 {
+      grid-area: paragrafo1;
+    }
+    .p2 {
+      grid-area: paragrafo2;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .servicos-wrapper {
+    .servico1 {
+      grid-area: servico1;
+      display: grid;
+
+      grid-template-columns: 1fr;
+      grid-template-rows: .3fr 2fr 1fr;
+      grid-template-areas: "nome1" "foto1" "paragrafo1";
+      align-items: center;
+      justify-items: center;
+    }
+
+    .servico2 {
+      grid-area: servico2;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: .3fr 2fr 1fr;
+      grid-template-areas: "nome2" "foto2" "paragrafo2";
+      align-items: center;
+      justify-items: center;
+    }
+    .servico-wrapper {
+      .servico-img {
+        width: 80vw;
+        border-radius: 15px;
+      }
+
+      .servico-nome {
+        font-family: 'Raleway', sans-serif;
+        font-size: 2rem;
+        padding: 5px;
+      }
+
+      .servico-paragraph {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.1rem;
+        padding: 5px;
+        text-align: justify;
+      }
+    }
+  }
+}
+

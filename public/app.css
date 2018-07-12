@@ -1,0 +1,434 @@
+@import url(https://fonts.googleapis.com/css?family=Fugaz+One|Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/*CSS RESET*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+    h1, h2, h3 {
+        font-size: 10px;
+    }
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    h1, h2, h3 {
+        font-size: 8px;
+    }
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+    h1, h2, h3 {
+        font-size: 8px;
+    }
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    h1, h2, h3 {
+        font-size: 9px;
+    }
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+    h1, h2, h3 {
+        font-size: 7px;
+    }
+}
+
+.App {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1.6fr 1.1fr .1fr;
+    grid-template-areas: "landingview" "servicos" "formulario" "footer";
+    grid-row-gap: 10px;
+    overflow: hidden;
+}
+
+@media (max-width: 500px) {
+    .App {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.9fr 1.9fr 1.2fr .05fr;
+        grid-template-areas: "landingview" "servicos" "formulario" "footer";
+        grid-row-gap: 10px;
+        overflow: hidden;
+    }
+}
+
+*:not(html,body) {
+    overflow: hidden;
+}
+
+body {
+    background-color: #78a0da;
+    color: white
+}
+
+
+
+.header-container {
+  height: 12vh;
+  font-size: 1.2rem;
+  grid-area: header;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
+  overflow: hidden; }
+
+.bemvindo-container {
+  display: grid;
+  grid-area: bemvindo;
+  text-align: center;
+  height: 85vh;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr;
+  grid-template-areas: "lixo" "lixo" "slogan";
+  grid-row-gap: 10px;
+  grid-auto-rows: minmax(1vh, auto); }
+  .bemvindo-container .bemvindo-subtitulo {
+    max-width: 60vw;
+    text-shadow: .1ch .1ch black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    grid-area: slogan;
+    align-self: start;
+    justify-self: center;
+    height: 15vh; }
+  .bemvindo-container .bemvindo-subtitulo {
+    max-width: 60vw;
+    text-shadow: .1ch .1ch black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    grid-area: slogan;
+    align-self: start;
+    justify-self: center;
+    height: 15vh;
+    overflow: hidden; }
+
+.header-title {
+  font-family: 'Fugaz One', sans-serif;
+  font-size: 26pt;
+  padding: 10px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  overflow: hidden; }
+
+.servicos-wrapper {
+  grid-area: servicos;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: .2fr 1fr 1fr;
+  grid-template-areas: "nossosservicos" "servico1" "servico2";
+  justify-items: center;
+  background-color: whitesmoke;
+  margin: 0 2vw;
+  border-radius: 15px;
+  color: #333;
+  padding: 0 5vw; }
+  .servicos-wrapper .nossos-servicos {
+    grid-area: nossosservicos;
+    padding: 5px;
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    align-self: center; }
+  .servicos-wrapper .servico1 {
+    grid-area: servico1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: .1fr .7fr;
+    grid-template-areas: "foto1 nome1" "foto1 paragrafo1";
+    align-items: center;
+    justify-items: center; }
+  .servicos-wrapper .servico2 {
+    grid-area: servico2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: .1fr .7fr;
+    grid-template-areas: "nome2 foto2" "paragrafo2 foto2";
+    align-items: center;
+    justify-items: center; }
+  .servicos-wrapper .servico-wrapper .servico-img {
+    width: 40vw;
+    height: 60vh; }
+  .servicos-wrapper .servico-wrapper .servico-nome {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+    padding: 5px;
+    visibility: hidden; }
+  .servicos-wrapper .servico-wrapper .servico-paragraph {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    padding: 5px;
+    text-align: justify;
+    visibility: hidden; }
+  .servicos-wrapper .servico-wrapper .hide {
+    opacity: 0; }
+  .servicos-wrapper .servico-wrapper .show {
+    opacity: 1; }
+  .servicos-wrapper .servico-wrapper .nome1 {
+    grid-area: nome1; }
+  .servicos-wrapper .servico-wrapper .nome2 {
+    grid-area: nome2; }
+  .servicos-wrapper .servico-wrapper .img1 {
+    grid-area: foto1; }
+  .servicos-wrapper .servico-wrapper .img2 {
+    grid-area: foto2; }
+  .servicos-wrapper .servico-wrapper .p1 {
+    grid-area: paragrafo1; }
+  .servicos-wrapper .servico-wrapper .p2 {
+    grid-area: paragrafo2; }
+
+@media (max-width: 500px) {
+  .servicos-wrapper .servico1 {
+    grid-area: servico1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .3fr 2fr 1fr;
+    grid-template-areas: "nome1" "foto1" "paragrafo1";
+    align-items: center;
+    justify-items: center; }
+  .servicos-wrapper .servico2 {
+    grid-area: servico2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .3fr 2fr 1fr;
+    grid-template-areas: "nome2" "foto2" "paragrafo2";
+    align-items: center;
+    justify-items: center; }
+  .servicos-wrapper .servico-wrapper .servico-img {
+    width: 80vw;
+    border-radius: 15px; }
+  .servicos-wrapper .servico-wrapper .servico-nome {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+    padding: 5px; }
+  .servicos-wrapper .servico-wrapper .servico-paragraph {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    padding: 5px;
+    text-align: justify; } }
+
+.formulario-wrapper {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-gap: 15px;
+  grid-area: formulario;
+  align-self: center;
+  justify-self: center;
+  width: 90vw;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem; }
+  .formulario-wrapper input {
+    border: none;
+    background-color: transparent;
+    font-family: 'Montserrat', sans-serif; }
+  .formulario-wrapper input[type=text], .formulario-wrapper input[type=email] {
+    border-bottom: 1px solid #111111;
+    display: block;
+    width: 50%;
+    padding: 5px; }
+  .formulario-wrapper #nome-input {
+    text-transform: capitalize; }
+  .formulario-wrapper input[type=submit] {
+    border-radius: 10px;
+    background-color: #3c4a9b;
+    color: white;
+    padding: 10px 20px; }
+  .formulario-wrapper label {
+    padding: 2px; }
+  .formulario-wrapper .formulario-fale {
+    font-size: 2rem;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 20px; }
+  .formulario-wrapper textarea {
+    padding: 5px;
+    resize: none;
+    display: block;
+    width: 50%;
+    border: 1px solid #222222;
+    border-radius: 5px;
+    background-color: transparent;
+    font-family: 'Montserrat', sans-serif; }
+
+@media (max-width: 500px) {
+  .formulario-wrapper textarea, .formulario-wrapper input[type=text], .formulario-wrapper input[type=email] {
+    width: 95%; } }
+
+.mensagem {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  transition: all 0.52s;
+  background: #FFF;
+  border: #777 solid 1px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.52);
+  position: fixed;
+  color: #333;
+  top: -150px;
+  width: 50%;
+  padding: 25px 0;
+  text-align: center;
+  left: 25%;
+  opacity: 0; }
+
+.mostrar-mensagem {
+  background-color: greenyellow;
+  top: 75px;
+  opacity: 1; }
+
+.footer-wrapper {
+  display: grid;
+  grid-area: footer;
+  height: 10vh;
+  align-self: stretch;
+  justify-self: stretch;
+  align-items: center;
+  background-color: #3c4a9b; }
+  .footer-wrapper .footer-text {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 5px;
+    font-family: 'Montserrat', sans-serif; }
+
+@-webkit-keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100px); }
+  100% {
+    transform: translateX(0); } }
+
+@-moz-keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100px); }
+  100% {
+    transform: translateX(0); } }
+
+@-o-keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100px); }
+  100% {
+    transform: translateX(0); } }
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100px); }
+  100% {
+    transform: translateX(0); } }
+
+@-webkit-keyframes slideInFromRight {
+  0% {
+    transform: translateX(100px); }
+  100% {
+    transform: translateX(0); } }
+
+@-moz-keyframes slideInFromRight {
+  0% {
+    transform: translateX(100px); }
+  100% {
+    transform: translateX(0); } }
+
+@-o-keyframes slideInFromRight {
+  0% {
+    transform: translateX(100px); }
+  100% {
+    transform: translateX(0); } }
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100px); }
+  100% {
+    transform: translateX(0); } }
+
+.inFromRight {
+  -webkit-animation: slideInFromLeft 1.5s forwards;
+  -moz-animation: slideInFromLeft 1.5s forwards;
+  -o-animation: slideInFromLeft 1.5s forwards;
+  animation: slideInFromLeft 1.5s forwards; }
+
+.inFromLeft {
+  -webkit-animation: slideInFromRight 1.5s forwards;
+  -moz-animation: slideInFromRight 1.5s forwards;
+  -o-animation: slideInFromRight 1.5s forwards;
+  animation: slideInFromRight 1.5s forwards; }
+
+.landingview {
+  grid-area: landingview;
+  background: url(images/img-1.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white; }
+
+@media (max-width: 500px) {
+  .bemvindo-container {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "slogan";
+    grid-row-gap: 10px;
+    grid-auto-rows: minmax(1vh, auto); }
+    .bemvindo-container .bemvindo-subtitulo {
+      align-self: end;
+      font-size: 1.5rem;
+      height: 25vh;
+      text-align: center; } }
+

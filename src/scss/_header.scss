@@ -1,0 +1,55 @@
+.header-container{
+  height: 12vh;
+  font-size: 1.2rem;
+  grid-area: header;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.1));
+  overflow: hidden;
+}
+
+
+.bemvindo-container {
+
+  display: grid;
+  grid-area: bemvindo;
+  text-align: center;
+  height: 85vh;
+
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr;
+  grid-template-areas: "lixo" "lixo" "slogan";
+  grid-row-gap: 10px;
+  grid-auto-rows: minmax(1vh, auto);
+
+  .bemvindo-subtitulo {
+    max-width: 60vw;
+    text-shadow: .1ch .1ch black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    grid-area: slogan;
+    align-self: start;
+    justify-self: center;
+    height: 15vh;
+  }
+
+  .bemvindo-subtitulo {
+    max-width: 60vw;
+    text-shadow: .1ch .1ch black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    grid-area: slogan;
+    align-self: start;
+    justify-self: center;
+    height: 15vh;
+    overflow: hidden;
+  }
+}
+
+.header-title {
+  font-family: 'Fugaz One', sans-serif;
+  font-size: 26pt;
+  padding: 10px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  overflow: hidden;
+}

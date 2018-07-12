@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Fugaz+One|Montserrat');
+@import "scss/header";
+@import "scss/servicos";
+@import "scss/formulario";
+@import "scss/footer";
+@import "scss/efeitos";
+
+.landingview {
+  grid-area: landingview;
+  background: url("images/img-1.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+}
+
+
+@media (max-width: 500px) {
+  .bemvindo-container {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "slogan";
+    grid-row-gap: 10px;
+    grid-auto-rows: minmax(1vh, auto);
+
+    .bemvindo-subtitulo {
+      align-self: end;
+      font-size: 1.5rem;
+      height: 25vh;
+      text-align: center;
+    }
+  }
+
+}

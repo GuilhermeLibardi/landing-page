@@ -1,0 +1,90 @@
+.formulario-wrapper {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-gap: 15px;
+  grid-area: formulario;
+  align-self: center;
+  justify-self: center;
+  width: 90vw;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+
+  input{
+    border: none;
+    background-color: transparent;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  input[type=text], input[type=email] {
+    border-bottom: 1px solid #111111;
+    display: block;
+    width: 50%;
+    padding: 5px;
+  }
+
+  #nome-input{
+    text-transform: capitalize;
+  }
+
+  input[type=submit]{
+    border-radius: 10px;
+    background-color: #3c4a9b;
+    color: white;
+    padding: 10px 20px;
+  }
+
+  label {
+    padding: 2px;
+  }
+
+  .formulario-fale {
+    font-size: 2rem;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 20px;
+  }
+
+  textarea {
+    padding: 5px;
+    resize: none;
+    display: block;
+    width: 50%;
+    border: 1px solid #222222;
+    border-radius: 5px;
+    background-color: transparent;
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+@media (max-width: 500px) {
+  .formulario-wrapper {
+    textarea, input[type=text], input[type=email] {
+      width: 95%;
+    }
+  }
+}
+
+.mensagem{
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  transition: all 0.52s;
+  background: #FFF;
+  border: #777 solid 1px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,.52);
+  position: fixed;
+  color: #333;
+  top: -150px;
+  width: 50%;
+  padding: 25px 0;
+  text-align: center;
+  left: 25%;
+  opacity: 0;
+}
+
+.mostrar-mensagem{
+  background-color: greenyellow;
+  top: 75px;
+  opacity: 1;
+}

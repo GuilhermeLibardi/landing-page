@@ -1,0 +1,16 @@
+.footer-wrapper{
+  display: grid;
+  grid-area: footer;
+  height: 10vh;
+  align-self: stretch;
+  justify-self: stretch;
+  align-items: center;
+  background-color: #3c4a9b;
+
+  .footer-text{
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 5px;
+    font-family: 'Montserrat', sans-serif;
+  }
+}
